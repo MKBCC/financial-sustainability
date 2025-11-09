@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>財務健全與永續價值的交織</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- AOS (scroll animation) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- GSAP for motion -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- VanillaTilt -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+    
+    <nav>
+        <!-- <div class="header-left">財務健全與永續價值的交織</div> -->
+        <ul>
+            <li><a href="#" id="homeTab">首頁</a></li>
+            <li><a href="#" id="searchTab">資料查詢</a></li>
+            <li><a href="#" id="strategyTab">交易策略</a></li>
+
+            <li><a href="#" id="aboutTab">關於我們</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+    <!-- 首頁 -->
+    <section id="homeSection" class="tab-content active">
+        <div class="home-hero" data-aos="fade-down">
+            <h1 class="hero-title">財務健全與永續價值的交織</h1>
+            <b><p class="hero-subtitle">結合 F-score 與 ESG 評分的投資策略研究</p></b>
+            <div class="hero-gradient"></div>
+        </div>
+
+        <div class="home-container">
+            <!-- 核心資訊 -->
+            <div class="home-block" data-aos="fade-up">
+                <h4>📘 專題核心資訊</h4>
+                <table class="info-table">
+                    <tr><th>專題類別</th><td>國立臺北商業大學 財務金融系 學生專題報告</td></tr>
+                    <tr><th>指導教師</th><td>王致怡 助理教授</td></tr>
+                    <tr><th>研究組別與日期</th><td>日四技財金四甲 D 組；114 年 11 月 26 日</td></tr>
+                    <tr><th>關鍵詞</th><td>ESG、科技產業、因子模型、投資組合建構</td></tr>
+                </table>
+            </div>
+
+            <!-- 🎯 研究摘要與動機 + 流程圖 -->
+            <div class="research-section" data-aos="fade-up" data-aos-delay="100">
+                <div class="motivation-grid">
+                    <!-- 左側文字與重點卡 -->
+                    <div class="motivation-left" data-aos="fade-right">
+                        <h4 class="motivation-title">🎯 研究摘要與動機</h4>
+                        <p class="motivation-intro">
+                            本研究聚焦於臺灣上市科技業公司，探討整合財務穩健性 (F-score) 與永續競爭力 (ESG 評分)
+                            的多維度選股模型，提出結合 F-score 與 ESG 評分的創新投資策略，
+                            為投資者提供更具前瞻性的選股工具。
+                        </p>
+                        <p class="motivation-intro">
+                            在傳統財務分析已難以全面評估企業價值的時代，本研究以科技業為例，
+                            設計融合 F-score 與 TESG 評分的投資準則，提供可操作的策略框架。
+                        </p>
+
+                        <div class="motivation-cards">
+                            <div class="motivation-card" data-aos="zoom-in">
+                                <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+                                <h5>研究創新</h5>
+                                <p>整合 <strong>F-score</strong> 與 <strong>TESG 永續評分</strong> 的新型投資模型。</p>
+                            </div>
+
+                            <div class="motivation-card" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+                                <h5>研究目的</h5>
+                                <p>建立具操作性的選股準則，兼顧永續與報酬。</p>
+                            </div>
+
+                            <div class="motivation-card" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="icon"><i class="fa-solid fa-flag"></i></div>
+                                <h5>研究貢獻</h5>
+                                <p>提供整合財務與非財務資訊的投資策略新視角。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右側流程圖 -->
+                    <div class="motivation-diagram" data-aos="fade-left">
+                        <div class="flow-node">
+                            <div class="node-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <p>F-score<br><span>財務健全性</span></p>
+                        </div>
+                        <div class="flow-arrow"><i class="fa-solid fa-plus"></i></div>
+                        <div class="flow-node">
+                            <div class="node-icon"><i class="fa-solid fa-earth-asia"></i></div>
+                            <p>TESG<br><span>永續評分</span></p>
+                        </div>
+                        <div class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="flow-node">
+                            <div class="node-icon"><i class="fa-solid fa-coins"></i></div>
+                            <p>投資策略<br><span>選股模型</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ⚙️ 研究方法與模型 -->
+            <div class="method-section" data-aos="fade-up">
+                <h4 class="method-title">⚙️ 研究方法與模型</h4>
+                <div class="method-grid">
+                    <div class="method-card" data-aos="zoom-in">
+                        <div class="icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <h5>Fama–French 模型</h5>
+                        <p>採用三因子、四因子及五因子模型進行實證分析，
+                           以檢驗財務與永續因子對報酬的解釋力。</p>
+                    </div>
+                    <div class="method-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon"><i class="fa-solid fa-database"></i></div>
+                        <h5>資料來源</h5>
+                        <p>研究數據取自 <strong>臺灣經濟新報 (TEJ)</strong>，
+                           期間涵蓋 2017 至 2024 年之上市科技業公司。</p>
+                    </div>
+                    <div class="method-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h5>F-score 財務健全性</h5>
+                        <p>衡量企業的 <strong>獲利性、安全性、成長性</strong>，
+                           綜合量化財務穩健程度。</p>
+                    </div>
+                    <div class="method-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="icon"><i class="fa-solid fa-earth-asia"></i></div>
+                        <h5>ESG 永續評分</h5>
+                        <p>採用 <strong>TESG 指標體系</strong>，
+                           涵蓋環境 (E)、社會 (S)、治理 (G) 三構面。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📈 研究成果亮點 -->
+            <div class="highlight-grid" data-aos="fade-up">
+                <div class="highlight-card" data-tilt>
+                    <h5>超額報酬</h5>
+                    <p>Alpha = 0.001105<br>持續創造超額報酬</p>
+                </div>
+                <div class="highlight-card" data-tilt>
+                    <h5>風險調整後報酬</h5>
+                    <p>Sharpe Ratio = 2.283929<br>顯著優於市場基準</p>
+                </div>
+                <div class="highlight-card" data-tilt>
+                    <h5>下行風險控制</h5>
+                    <p>MDD = −0.188447<br>具防禦力與抗跌性</p>
+                </div>
+                <div class="highlight-card" data-tilt>
+                    <h5>報酬成長性</h5>
+                    <p>CAGR = 0.630617<br>長線報酬韌性高</p>
+                </div>
+            </div>
+
+            <div class="home-block" data-aos="fade-up">
+                <h4>🔍 結論與貢獻</h4>
+                <p>
+                    本研究證實：結合 <strong>F-Score (財務健全度)</strong> 與 <strong>TESG (永續價值)</strong>
+                    的雙因子策略，在控制風險下，能穩定創造顯著優於大盤的超額報酬。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 資料查詢 -->
+    <section id="searchSection" class="tab-content">
+        <h2>資料查詢</h2>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="輸入 TICK 或 ID">
+            <input type="date" id="dateInput">
+            <button id="searchBtn">查詢</button>
+        </div>
+
+        <table id="resultTable">
+            <thead><tr id="tableHeader"></tr></thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+
+        <div id="chartContainer">
+            <canvas id="chartCanvas"></canvas>
+        </div>
+    </section>
+
+<!-- 交易策略頁面 -->
+<section id="strategySection" class="tab-content">
+  <div class="strategy-container">
+    <h2 class="strategy-title" data-aos="fade-down">📈 財務健全與永續價值的交織：雙因子投資策略詳解與實證績效</h2>
+
+    <!-- 一、核心理念 -->
+    <div class="strategy-block" data-aos="fade-up">
+      <h3>一、核心理念：為何整合 F-Score 與 ESG？</h3>
+      <p>
+        傳統投資決策單純依賴財務指標，已不足以評估科技產業中企業的長期價值。
+        本策略目標為建構兼顧 <strong>財務穩健性</strong> 與 <strong>永續競爭力</strong> 的多維度選股模型。
+      </p>
+
+      <div class="strategy-card-grid">
+        <div class="strategy-card" data-tilt>
+          <i class="fa-solid fa-building"></i>
+          <h4>研究對象</h4>
+          <p>臺灣上市科技業與通訊產業（依 SASB 分類架構）。</p>
+        </div>
+        <div class="strategy-card" data-tilt>
+          <i class="fa-solid fa-calendar"></i>
+          <h4>研究期間</h4>
+          <p>2018 年 1 月 1 日至 2024 年 12 月 31 日。</p>
+        </div>
+        <div class="strategy-card" data-tilt>
+          <i class="fa-solid fa-chart-column"></i>
+          <h4>基準指數</h4>
+          <p>TEJ Y9999 加權指數（臺灣加權股價指數）。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 二、雙因子選股架構 -->
+    <div class="strategy-block" data-aos="fade-up">
+      <h3>二、雙因子選股架構（Dual-Factor Screening）</h3>
+      <p>
+        本策略採用雙因子選股模型，結合 <strong>Piotroski F-Score</strong>（基本面因子）與
+        <strong>TESG 評級</strong>（永續性因子），並輔以動能指標進行最終篩選。
+      </p>
+
+      <table class="info-table">
+        <tr>
+          <th>篩選步驟</th>
+          <th>因子類別</th>
+          <th>篩選條件（入選標準）</th>
+          <th>策略目的</th>
+        </tr>
+        <tr>
+          <td>第一階段</td>
+          <td>財務健全度（F-Score）</td>
+          <td><strong>8–9 分</strong></td>
+          <td>確保入選公司具備財務結構穩健與獲利能力。</td>
+        </tr>
+        <tr>
+          <td>第二階段</td>
+          <td>企業永續性（TESG 評級）</td>
+          <td><strong>A 或 A+</strong></td>
+          <td>強化企業在公司治理與社會責任的落實度。</td>
+        </tr>
+        <tr>
+          <td>第三階段</td>
+          <td>動能指標（Momentum）</td>
+          <td>取近三個月累積報酬最高的前八檔股票</td>
+          <td>衡量短期市場表現，用作最終過濾。</td>
+        </tr>
+      </table>
+
+      <p class="note">
+        ※ 若動能資料缺失，則以 F-Score 高低排序進行補選。
+      </p>
+
+      <div class="strategy-diagram" data-aos="zoom-in">
+        <div class="flow-node">
+          <i class="fa-solid fa-coins"></i>
+          <p>F-Score<br><span>財務健全性</span></p>
+        </div>
+        <div class="flow-arrow"><i class="fa-solid fa-plus"></i></div>
+        <div class="flow-node">
+          <i class="fa-solid fa-earth-asia"></i>
+          <p>TESG<br><span>永續評分</span></p>
+        </div>
+        <div class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="flow-node">
+          <i class="fa-solid fa-chart-line"></i>
+          <p>投資組合<br><span>選股策略</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 三、投資組合建構與管理細節 -->
+    <div class="strategy-block" data-aos="fade-up">
+      <h3>三、投資組合建構與管理細節</h3>
+      <table class="info-table">
+        <tr><th>管理項目</th><th>設定細節</th></tr>
+        <tr><td>投資組合規模</td><td>每次再平衡時最多持有八檔股票。</td></tr>
+        <tr><td>權重配置</td><td>所有持股均採 <strong>等權配置</strong>（Equal Weighting）。</td></tr>
+        <tr><td>再平衡頻率</td><td>每年 3、6、9、12 月第十五個交易日。</td></tr>
+        <tr><td>交易成本</td><td>單邊交易成本 0.20%（含手續費 0.15% 與滑價 0.05%）。</td></tr>
+        <tr><td>槓桿上限</td><td>投資組合槓桿上限 90%。</td></tr>
+        <tr><td>樣本分割</td><td>2018–2022 為樣本內，2023–2024 為樣本外期間。</td></tr>
+      </table>
+    </div>
+
+    <!-- 四、策略績效 -->
+    <div class="strategy-block" data-aos="fade-up">
+      <h3>四、實證績效：樣本外期間的卓越表現（2023–2024）</h3>
+      <p>
+        策略在樣本外期間展現出顯著優於市場基準 (Y9999) 的績效，
+        無論在報酬成長、風險控制或超額報酬皆有亮眼表現。
+      </p>
+
+      <table class="info-table performance-table">
+        <tr>
+          <th>績效指標</th>
+          <th>雙因子策略</th>
+          <th>市場基準 (Y9999)</th>
+          <th>成果闡述</th>
+        </tr>
+        <tr>
+          <td>CAGR</td><td><strong>0.630617</strong></td><td>0.102975</td><td>長期報酬韌性強，遠高於市場。</td>
+        </tr>
+        <tr>
+          <td>Cumulative Return</td><td><strong>1.542862</strong></td><td>0.940858</td><td>跨期報酬穩健。</td>
+        </tr>
+        <tr>
+          <td>Alpha</td><td><strong>0.001105</strong></td><td>0.000000</td><td>剔除系統性風險後仍創造正報酬。</td>
+        </tr>
+        <tr>
+          <td>Sharpe Ratio</td><td><strong>2.283929</strong></td><td>0.652148</td><td>風險調整後報酬效率極佳。</td>
+        </tr>
+        <tr>
+          <td>MDD</td><td><strong>-0.188447</strong></td><td>-0.327400</td><td>下行風險顯著低於市場。</td>
+        </tr>
+        <tr>
+          <td>Calmar Ratio</td><td><strong>3.346397</strong></td><td>0.314523</td><td>抗跌性佳，控制 MDD 下維持高報酬。</td>
+        </tr>
+        <tr>
+          <td>Sortino Ratio</td><td><strong>0.012334</strong></td><td>0.003191</td><td>有效抑制下行波動。</td>
+        </tr>
+      </table>
+
+      <div class="highlight-grid" data-aos="fade-up">
+        <div class="highlight-card" data-tilt>
+          <h5>CAGR</h5><p>0.630617<br>長期成長性極高</p>
+        </div>
+        <div class="highlight-card" data-tilt>
+          <h5>Sharpe Ratio</h5><p>2.283929<br>風險調整後報酬優異</p>
+        </div>
+        <div class="highlight-card" data-tilt>
+          <h5>MDD</h5><p>-0.188447<br>風險防禦力出色</p>
+        </div>
+        <div class="highlight-card" data-tilt>
+          <h5>Alpha</h5><p>0.001105<br>穩定超額報酬</p>
+        </div>
+      </div>
+    </div>
+<!-- 四之一、策略與基準指數之累積報酬走勢圖 -->
+<div class="strategy-block" data-aos="fade-up">
+  <h3>五、策略與基準指數之累積報酬走勢圖</h3>
+  <p>
+    為進一步比較投資策略與市場基準指數間的長期績效差異，
+    下圖繪製 2018–2025 年間策略累積報酬與 TEJ Y9999 指數累積報酬之走勢，
+    直觀呈現策略於樣本內與樣本外期間的超額報酬表現。
+  </p>
+
+  <div class="chart-container" data-aos="zoom-in">
+    <img src="image1.png" alt="策略與基準指數累積報酬走勢比較圖" class="strategy-chart">
+    <p class="chart-caption">圖　策略與 TEJ Y9999 指數累積報酬走勢比較圖（2018–2025）</p>
+  </div>
+  <!-- 六、歷年入選標的一覽 -->
+<div class="strategy-block" data-aos="fade-up">
+  <h3>六、歷年入選標的一覽</h3>
+  <p>
+    下表整理 2018 至 2024 年間各年度雙因子策略所入選之主要標的，
+    以反映策略於不同市場週期下的選股特性與穩定性。
+  </p>
+
+  <table class="info-table performance-table">
+    <thead>
+      <tr>
+        <th>年度</th>
+        <th colspan="8">入選標的</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>2018</strong></td>
+        <td>3583 辛耘</td><td>3034 聯詠</td><td>4915 致伸</td><td>6176 瑞儀</td>
+        <td>6285 君鴻</td><td>8021 昇陽半導體</td><td>2377 微星</td><td>6183 關貿</td>
+      </tr>
+      <tr>
+        <td><strong>2019</strong></td>
+        <td>5234 達興材料</td><td>2379 瑞昱</td><td>3605 宏致</td><td>6202 盛群</td>
+        <td>2332 友訊</td><td>8046 南電</td><td>6206 飛捷</td><td>2330 台積電</td>
+      </tr>
+      <tr>
+        <td><strong>2020</strong></td>
+        <td>2345 智邦</td><td>2356 英業達</td><td>2395 研華</td><td>2301 光寶科</td>
+        <td>2439 美律</td><td>4938 和碩</td><td>2354 鴻準</td><td>8150 博智</td>
+      </tr>
+      <tr>
+        <td><strong>2021</strong></td>
+        <td>3094 聯傑</td><td>4915 致伸</td><td>2330 台積電</td><td>2301 光寶科</td>
+        <td>2382 廣達</td><td>2303 聯電</td><td>3189 景碩</td><td>2453 凌群</td>
+      </tr>
+      <tr>
+        <td><strong>2022</strong></td>
+        <td>3094 聯傑</td><td>4938 和碩</td><td>2409 友達</td><td>2360 致茂</td>
+        <td>2453 凌群</td><td>2393 億電</td><td>3042 晶技</td><td>4919 新唐</td>
+      </tr>
+      <tr>
+        <td><strong>2023</strong></td>
+        <td>3231 緯創</td><td>6412 群電</td><td>2303 聯電</td><td>2324 仁寶</td>
+        <td>2356 英業達</td><td>3044 健策</td><td>2385 群光</td><td>2345 智邦</td>
+      </tr>
+      <tr>
+        <td><strong>2024</strong></td>
+        <td>2312 金寶</td><td>3596 智易</td><td>2382 廣達</td><td>2357 華碩</td>
+        <td colspan="4"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="note">
+    <br>※ 各年度入選公司依策略條件（F-Score、TESG 評級、動能指標）排序列示。
+  </p>
+</div>
+
+
+  <p>
+    圖中顯示雙因子策略自 2023 年樣本外期間開始明顯脫離基準指數，
+    至 2024 年底最終累積報酬達 <strong>2.26 倍</strong>，
+    明顯優於 TEJ Y9999 指數之 <strong>0.77 倍</strong>，
+    並展現出穩健的上升趨勢與顯著的超額報酬能力。
+  </p>
+</div>
+
+
+<!-- 七、策略績效指標統計（2018–2024） -->
+<div class="strategy-block" data-aos="fade-up">
+  <h3>七、策略績效指標統計（2018–2024）</h3>
+  <table class="metric-table">
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Y9999</th>
+        <th>In-Sample<br>(2018–2022)</th>
+        <th>Out-of-Sample<br>(2023–2024)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 區塊 1 -->
+      <tr><td>Cumulative Return</td><td>0.940858</td><td>0.286897</td><td>1.542862</td></tr>
+      <tr><td>CAGR</td><td>0.102975</td><td>0.533035</td><td>0.630617</td></tr>
+    </tbody>
+    <tbody class="alt-section">
+      <!-- 區塊 2 -->
+      <tr><td>Volatility</td><td>0.173549</td><td>0.197776</td><td>0.225474</td></tr>
+      <tr><td>Beta</td><td>1.000000</td><td>0.902172</td><td>0.925022</td></tr>
+      <tr><td>Max Drawdown</td><td>-0.327402</td><td>-0.310225</td><td>-0.188447</td></tr>
+    </tbody>
+    <tbody>
+      <!-- 區塊 3 -->
+      <tr><td>Semi-Std</td><td>0.189885</td><td>0.215843</td><td>0.236907</td></tr>
+      <tr><td>FLPM</td><td>0.003618</td><td>0.004459</td><td>0.004333</td></tr>
+      <tr><td>CVaR</td><td>0.027123</td><td>0.031286</td><td>0.033444</td></tr>
+      <tr><td>EVaR</td><td>0.047654</td><td>0.051238</td><td>0.053027</td></tr>
+    </tbody>
+    <tbody class="alt-section">
+      <!-- 區塊 4 -->
+      <tr><td>Sharpe Ratio</td><td>0.652148</td><td>0.362052</td><td>2.283929</td></tr>
+      <tr><td>Sortino Ratio</td><td>0.003191</td><td>0.001864</td><td>0.012334</td></tr>
+      <tr><td>Calmar Ratio</td><td>0.314523</td><td>0.171819</td><td>3.346397</td></tr>
+      <tr><td>Omega</td><td>1.124137</td><td>1.063725</td><td>1.471594</td></tr>
+      <tr><td>Alpha</td><td>0.000000</td><td>0.000080</td><td>0.001105</td></tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+    <!-- 五、實證意涵與結論 -->
+    <div class="strategy-block" data-aos="fade-up">
+      <h3>七、策略意涵與結論</h3>
+      <p>
+        雙因子策略證實，高 <strong>F-Score</strong>（財務健全）與高 <strong>TESG</strong>（永續價值）
+        的組合能在控制風險的同時創造穩健報酬。策略在 Alpha、Sharpe Ratio 與 MDD 皆顯著優於市場。
+      </p>
+      <blockquote>
+        策略如同一架擁有 <strong>高性能引擎（F-Score）</strong> 與
+        <strong>穩定飛控系統（TESG）</strong> 的飛機，
+        不僅能快速成長（高 CAGR），也能平穩穿越市場波動（低 MDD），
+        在長期中達成持續穩定的報酬。
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+
+    <section id="aboutSection" class="tab-content">
+        <h2>關於我們</h2>
+        <p>此頁面目前留空。</p>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
