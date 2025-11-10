@@ -18,7 +18,7 @@ navLinks.forEach(link => {
     document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
     if (link.id === "homeTab") document.querySelector("#homeSection").classList.add("active");
     if (link.id === "searchTab") document.querySelector("#searchSection").classList.add("active");
-    if (link.id === "aboutTab") document.querySelector("#aboutSection").classList.add("active");
+    // if (link.id === "aboutTab") document.querySelector("#aboutSection").classList.add("active");
     if (link.id === "strategyTab") document.querySelector("#strategySection").classList.add("active");
 
     // 頁籤底色動畫
