@@ -642,3 +642,28 @@ nav .tab-bg {
   text-align: left;
   padding-left: 15px;
 }
+/* 📑 股票清單表格外框線 + 陰影 */
+.stock-table-10col {
+    border: 1px solid #d1d5db;     /* 外框線 */
+    border-radius: 8px;            /* 外框圓角 */
+    overflow: hidden;              /* 讓圓角作用到內部 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 表格陰影 */
+}
+
+/* 表格內欄位樣式 */
+.stock-table-10col td {
+    white-space: nowrap;
+    padding: 6px 8px;
+    text-align: left;
+    font-size: 14px;
+    border: 1px solid #e5e7eb;  /* 每格細線，與 info-table 視覺一致 */
+}
+
+/* 垂直奇偶列顏色 */
+.stock-table-10col tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.stock-table-10col tr:nth-child(odd) {
+    background-color: #ffffff;
+}
